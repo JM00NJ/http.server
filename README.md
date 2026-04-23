@@ -1,4 +1,4 @@
-# Bare-Metal Assembly HTTP Server
+## Bare-Metal Assembly HTTP Server
 When we need to quickly share files or serve a local directory, we often rely on the convenient python -m http.server command. But how does that "magic" actually work under the hood at the operating system level?
 
 This project is an experiment in recreating the core functionality of a standard HTTP server without using any external libraries (not even libc), relying purely on x86_64 Assembly and direct Linux System Calls (Syscalls).
@@ -92,3 +92,6 @@ See the raw HTTP headers (useful for debugging):
 ```bash
 curl -v http://localhost:8080/randomfile.txt
 ```
+
+**Resource:**
+https://netacoding.com/posts/assembly-httpserver/
